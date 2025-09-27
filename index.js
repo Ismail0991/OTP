@@ -18,7 +18,7 @@ const otpStore = new Map();
 // 🔑 Configure Brevo API
 const defaultClient = SibApiV3Sdk.ApiClient.instance;
 let apiKey = defaultClient.authentications["api-key"];
-apiKey.apiKey = process.env.BREVO_API_KEY || "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";
+apiKey.apiKey = process.env.BREVO_API_KEY;
 const tranEmailApi = new SibApiV3Sdk.TransactionalEmailsApi();
 
 // Generate 6-digit OTP
