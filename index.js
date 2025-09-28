@@ -99,7 +99,7 @@ setInterval(() => {
     .get("https://firebase-listener.onrender.com/")
     .then(() => console.log("🔁 Pinged firebase-listener"))
     .catch((err) => console.error("⚠️ Ping failed:", err.message));
-}, 10 * 60 * 1000);
+}, 1 * 60 * 1000);
 
 // Health check endpoint
 app.get("/ping", (req, res) => {
