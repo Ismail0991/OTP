@@ -101,6 +101,13 @@ setInterval(() => {
     .catch((err) => console.error("⚠️ Ping failed:", err.message));
 }, 3 * 60 * 1000);
 
+setInterval(() => {
+  axios
+    .get("https://treesol-technologies-letter-head-and.onrender.com/ping")
+    .then(() => console.log("🔁 Pinged Treesol server"))
+    .catch((err) => console.error("⚠️ Ping failed:", err.message));
+}, 2 * 60 * 1000);
+
 // Health check endpoint
 app.get("/ping", (req, res) => {
   try {
